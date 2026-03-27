@@ -1,14 +1,13 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import API from "./services/api";
+import Login from "./components/Login";
 
 function App() {
-  const [data, setData] = useState("");
-
-  useEffect(() => {
-    API.get("/").then((res) => setData(res.data));
-  }, []);
-
-  return <h1>{data}</h1>;
+  return (
+    <div>
+      <Login />
+    </div>
+  );
 }
 
 export default App;
